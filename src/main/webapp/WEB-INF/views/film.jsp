@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Car</title>
+        <title>Films</title>
         <style type="text/css">
             .licensePlate {
                 border: 0.15rem solid firebrick;
@@ -17,7 +17,6 @@
         </style>
     </head>
     <body>
-        <h1>${car.model.brand.name} ${car.model.name}</h1>
-        <span class="licensePlate">${car.licensePlate}</span>
+        <h1>${film} ${film.title}</h1>
     </body>
 </html>
