@@ -1,10 +1,13 @@
 package be.vdab.domain;
 
+import java.lang.*;
+import java.util.List;
+
 public class Film {
     private String title;
-    private Cast cast;
+    private List<Character> cast;
     private int length;
-    private Director director;
+    private String director;
     private String summary;
     private Genre genre;
     private double rating;

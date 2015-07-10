@@ -6,7 +6,6 @@ public class Actor {
     private String bio;
     private Date birthDay;
     private Gender gender;
-    private Character character;
     private byte[] profileImage;
 
 }
