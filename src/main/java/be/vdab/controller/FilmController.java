@@ -9,22 +9,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class FilmController {
     @Autowired
     private FilmRepository filmRepository;
 
-    @RequestMapping("/")
-    public String home() {
-        return "home";
+    @RequestMapping("/films")
+    public String home(Map<String, Object> model) {
+        List<Film> films = filmRepository.findAll();
+        model.put("filmList", films);
+        return "films";
     }
 
-//    public List<Film> getAllFilms() {
-//        return filmRepository.findAll();
-//    }
+    public List<Film> getAllFilms() {
+        return filmRepository.findAll();
+    }
 
-//    public String getReviewByFilmId(int id) {
-//        return filmRepository.findOne(id).getSummary();
-//    }
+    public String getReviewByFilmId(int id) {
+        return filmRepository.findOne(id).getSummary();
+    }
 }
