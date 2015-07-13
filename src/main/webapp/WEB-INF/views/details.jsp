@@ -12,8 +12,11 @@
 
 <body>
 <div class="container">
-    <h1>Details of ^</h1>
+    <h1>${film.title}</h1>
+</div>
 
+<div>
+    Cast: <br>
 
 </div>
 

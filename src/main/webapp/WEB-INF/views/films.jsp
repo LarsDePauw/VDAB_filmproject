@@ -24,7 +24,7 @@
         <c:forEach items="${filmList}" var="film">
             <tr>
                 <td>${film.id}</td>
-                <td><a href="/details?id=${film.id}">${film.title}</a></td>
+                <td><a href="films/details?id=${film.id}">${film.title}</a></td>
             </tr>
         </c:forEach>
     </table>

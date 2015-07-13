@@ -25,9 +25,10 @@ public class FilmController {
         return "films";
     }
 
-    @RequestMapping(value = "/details", method = RequestMethod.GET)
-    public String details(@RequestParam ("id") int id) {
+    @RequestMapping(value = "films/details", method = RequestMethod.GET)
+    public String details(@RequestParam ("id") int id, Map<String, Object> model) {
         Film film = filmRepository.findOne(id);
+        model.put("film", film);
         return "details";
     }
 
