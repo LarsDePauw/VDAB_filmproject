@@ -14,6 +14,7 @@ public class Film {
     private String title;
 
     @OneToMany
+    @JoinColumn(name = "film_id")
     private List<Character> cast = new ArrayList<>();
 
     @OneToMany
@@ -27,9 +28,11 @@ public class Film {
     private byte[] image;
     private String trailerUrl;
 
-    public Film(List<Character> cast, int length, String director, String summary,
-                Genre genre, double rating, byte[] image, String trailerUrl) {
+
+    public Film(String title, List<Character> cast, List<Comment> comments, int duration, String director, String summary, Genre genre, double rating, byte[] image, String trailerUrl) {
+        this.title = title;
         this.cast = cast;
+        this.comments = comments;
         this.duration = duration;
         this.director = director;
         this.summary = summary;
@@ -40,6 +43,10 @@ public class Film {
     }
 
     public Film() {
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -58,10 +65,6 @@ public class Film {
         this.cast = cast;
     }
 
-
-    public Integer getId() {
-        return id;
-    }
 
     public int getDuration() {
         return duration;

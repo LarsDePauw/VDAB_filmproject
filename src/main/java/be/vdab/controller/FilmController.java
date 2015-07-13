@@ -26,12 +26,11 @@ public class FilmController {
     }
 
     @RequestMapping(value = "films/details", method = RequestMethod.GET)
-    public String details(@RequestParam ("id") int id, Map<String, Object> model) {
+    public String details(@RequestParam("id") int id, Map<String, Object> model) {
         Film film = filmRepository.findOne(id);
         model.put("film", film);
         return "details";
     }
-
 
     public List<Film> getAllFilms() {
         return filmRepository.findAll();

@@ -15,10 +15,7 @@
     <h1>${film.title}</h1>
 </div>
 
-<div>
-    Cast: <br>
 
-</div>
 
 </body>
 </html>
