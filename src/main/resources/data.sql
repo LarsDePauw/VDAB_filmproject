@@ -1,2 +1,3 @@
-INSERT INTO film (title, duration, director, summary) values ('filmtitel', 133, 'director of film', 'this is the summary');
+INSERT INTO film (title, duration, director, summary) values ('Into the wild', 230, 'Johannes Paulus II', 'Man abandons materialism to live in the wild');
 INSERT INTO film (title, duration, director, summary) values ('Pulp Fiction', 105, 'Quentin Tarantino', 'people get killed over a briefcase');
+INSERT INTO film (title, duration, director, summary) values ('Escape from Alcatraz', 192, 'Stever Birkwood', 'Cons try to escape from the fortress which is Alcatraz prison');

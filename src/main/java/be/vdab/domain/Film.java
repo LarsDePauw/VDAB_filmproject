@@ -59,6 +59,10 @@ public class Film {
 //    }
 
 
+    public Integer getId() {
+        return id;
+    }
+
     public int getDuration() {
         return duration;
     }
