@@ -7,6 +7,8 @@ import be.vdab.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
@@ -16,12 +18,19 @@ public class FilmController {
     @Autowired
     private FilmRepository filmRepository;
 
-    @RequestMapping("/films")
+    @RequestMapping(value = "/films", method = RequestMethod.GET)
     public String home(Map<String, Object> model) {
         List<Film> films = filmRepository.findAll();
         model.put("filmList", films);
         return "films";
     }
+
+    @RequestMapping(value = "/details", method = RequestMethod.GET)
+    public String details(@RequestParam ("id") int id) {
+        Film film = filmRepository.findOne(id);
+        return "details";
+    }
+
 
     public List<Film> getAllFilms() {
         return filmRepository.findAll();
@@ -29,5 +38,9 @@ public class FilmController {
 
     public String getReviewByFilmId(int id) {
         return filmRepository.findOne(id).getSummary();
+    }
+
+    public Film getFilmById(int id) {
+        return filmRepository.findOne(id);
     }
 }

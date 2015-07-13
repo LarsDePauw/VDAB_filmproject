@@ -7,27 +7,14 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <title>Films</title>
+    <title>Details</title>
 </head>
+
 <body>
 <div class="container">
-    <h1>This is a list of all films</h1>
-</div>
+    <h1>Details of ^</h1>
 
-<div class="container">
-    <table class="table table-striped table-bordered table-condensed">
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
 
-        </tr>
-        <c:forEach items="${filmList}" var="film">
-            <tr>
-                <td>${film.id}</td>
-                <td><a href="/details?id=${film.id}">${film.title}</a></td>
-            </tr>
-        </c:forEach>
-    </table>
 </div>
 
 </body>
