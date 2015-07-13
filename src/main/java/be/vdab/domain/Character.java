@@ -1,9 +1,11 @@
 package be.vdab.domain;
 
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
+@Entity
 public class Character {
-    private String characterName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)    private String characterName;
     @OneToOne
     private Actor actor;
 

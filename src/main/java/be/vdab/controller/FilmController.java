@@ -5,12 +5,17 @@ import be.vdab.domain.Comment;
 import be.vdab.domain.Film;
 import be.vdab.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
 public class FilmController {
     @Autowired
     private FilmRepository filmRepository;
+    @RequestMapping("/")
+    public String home() {
+        return "home";
+    }
 
     public List<Film> getAllFilms() {
         return filmRepository.findAll();
@@ -18,8 +23,5 @@ public class FilmController {
 
     public String getReviewByFilmId(int id) {
         return filmRepository.findOne(id).getSummary();
-    }
-    public byte[] getFilmImage(Film film) {
-        return film.getImage();
     }
 }
