@@ -1,18 +1,17 @@
 package be.vdab.domain;
 
-        import org.springframework.data.annotation.Id;
 
-        import javax.persistence.Entity;
-        import javax.persistence.GeneratedValue;
-        import javax.persistence.GenerationType;
+        import javax.persistence.*;
 
 @Entity
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToOne
     private User user;
     private int rating;
     private String commentDescription;
+    @OneToOne
     private Film film;
 
     public Comment(int rating, String commentDescription, Film film) {

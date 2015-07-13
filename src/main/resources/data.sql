@@ -1,0 +1,1 @@
+INSERT INTO film (title, cast, length, director, summary, genre, rating, image, trailerUrl) values ('uhgn', '', 133, 'pvjk', 'pekodfvjzhvhhvosvfodh', action, 7.7, 'fejnvjv', 'efjnvfnv')

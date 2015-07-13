@@ -17,6 +17,6 @@
         </style>
     </head>
     <body>
-        <h1>${film} ${film.title}</h1>
+    <h1>Welcome to my Film moviedatabase</h1>
     </body>
 </html>

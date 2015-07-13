@@ -1,8 +1,13 @@
 package be.vdab.domain;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToMany(mappedBy = "user")
     private List<Comment> comments;
     private String userName;
 
