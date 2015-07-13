@@ -1,1 +1,1 @@
-INSERT INTO film (title, length, director, summary) values ('filmtitel', 133, 'director of film', 'this is the summary');
+INSERT INTO film (title, duration, director, summary) values ('filmtitel', 133, 'director of film', 'this is the summary');

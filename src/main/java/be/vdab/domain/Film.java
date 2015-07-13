@@ -1,20 +1,25 @@
 package be.vdab.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.lang.*;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String title;
-   // private List<Character> cast;
-    private int length;
+
+    @OneToMany
+    private List<Character> cast = new ArrayList<>();
+
+    @OneToMany
+    private List<Comment> comments = new ArrayList<>();
+
+    private int duration;
     private String director;
     private String summary;
    // private Genre genre;
@@ -53,12 +58,13 @@ public class Film {
 //        this.cast = cast;
 //    }
 
-    public int getLength() {
-        return length;
+
+    public int getDuration() {
+        return duration;
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     public String getDirector() {

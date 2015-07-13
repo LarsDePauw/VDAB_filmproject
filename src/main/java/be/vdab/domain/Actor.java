@@ -1,10 +1,7 @@
 package be.vdab.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 
@@ -12,9 +9,17 @@ import java.util.Date;
 public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String bio;
+
+    @Temporal(TemporalType.DATE)
     private Date birthDay;
+
+    @Enumerated(EnumType.ORDINAL)
     private Gender gender;
+
+    @Lob
     private byte[] profileImage;
 
     public Actor(Date birthDay, Gender gender, byte[] profileImage) {
