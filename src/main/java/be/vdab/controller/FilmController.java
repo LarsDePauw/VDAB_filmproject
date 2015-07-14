@@ -18,6 +18,11 @@ public class FilmController {
     @Autowired
     private FilmRepository filmRepository;
 
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home() {
+        return "home";
+    }
+
     @RequestMapping(value = "/films", method = RequestMethod.GET)
     public String home(Map<String, Object> model) {
         List<Film> films = filmRepository.findAll();
@@ -29,7 +34,7 @@ public class FilmController {
     public String details(@RequestParam("id") int id, Map<String, Object> model) {
         Film film = filmRepository.findOne(id);
         model.put("film", film);
-        return "details";
+        return "filmDetails";
     }
 
     public List<Film> getAllFilms() {
