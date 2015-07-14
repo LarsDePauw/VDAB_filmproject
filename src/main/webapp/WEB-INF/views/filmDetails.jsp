@@ -35,6 +35,7 @@
     <h2>Info</h2>
     Rating: ${film.rating}<br>
     Genre: ${film.genre}<br>
+    Length: ${film.duration} min<br>
     Directed by ${film.director}<br>
 
 </div>

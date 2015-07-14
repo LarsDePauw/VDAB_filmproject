@@ -18,23 +18,28 @@
 </div>
 <div class="information">
 
-    <sf:form method="POST" modelAttribute="newPerson" cssClass="personForm">
-        <table>
-            <tr>
-                <td><sf:label path="firstName">First name:</sf:label></td>
-                <td><sf:input path="firstName"/></td>
-            </tr>
-            <tr>
-                <td><sf:label path="lastName">Last name:</sf:label></td>
-                <td><sf:input path="lastName"/></td>
-            </tr>
-            <tr>
-                <td><sf:label path="age">Age:</sf:label></td>
-                <td><sf:input path="age" /></td>
-            </tr>
-            <tr><td></td><td><input type="submit" value="Add" /></td></tr>
-        </table>
+    <sf:form commandName="film" action="/create" method="post">
+        <sf:hidden path="id"/>
+        <div class="form-group">
+            <label for="title" class="col-md-2">Title</label>
+            <sf:input path="title" class="col-md-10"/>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-md-2">Director</label>
+            <sf:input path="director" class="col-md-10"/>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-md-2">Genre</label>
+            <sf:input path="genre" class="form-control col-md-10"/>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-md-2">Length</label>
+            <sf:input path="duration" class="form-control col-md-10"/>
+        </div>
+        <button type="submit" class="btn btn-danger">SAVE</button>
     </sf:form>
+
+
 </div>
 
 </body>

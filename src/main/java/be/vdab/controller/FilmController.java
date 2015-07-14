@@ -20,6 +20,18 @@ public class FilmController {
     @Autowired
     private FilmRepository filmRepository;
 
+    public List<Film> getAllFilms() {
+        return filmRepository.findAll();
+    }
+
+    public String getReviewByFilmId(int id) {
+        return filmRepository.findOne(id).getSummary();
+    }
+
+    public Film getFilmById(int id) {
+        return filmRepository.findOne(id);
+    }
+
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home() {
         return "home";
@@ -38,21 +50,6 @@ public class FilmController {
         model.put("film", film);
         return "filmDetails";
     }
-    @RequestMapping (value = "films/create", method = RequestMethod.POST)
-    public String addMovie(@Valid Film film, Map<String, Object> model){
-        filmRepository.save(film);
-        model.put("film", film);
-        return "redirect:/filmForm";
-    }
-    @RequestMapping (value = "films/edit", method = RequestMethod.POST)
-    public String editFilm(Map<String, Object> model, @RequestParam(value = "id", required = false) Integer id) {
-        if (id == null) {
-            model.put("film", new Film());
-        } else {
-            model.put("film", filmRepository.findOne(id));
-        }
-        return "redirect:/films";
-    }
 
     @RequestMapping(value = "films/delete/{filmId}", method = RequestMethod.GET)
     public String delete(@PathVariable("filmId") int id) {
@@ -60,15 +57,23 @@ public class FilmController {
         return "redirect:/films";
     }
 
-    public List<Film> getAllFilms() {
-        return filmRepository.findAll();
+    @RequestMapping("films/form/{id}")
+    public String form(Map<String, Object> model, @RequestParam(value = "id", required = false) Integer filmId) {
+        if (filmId == null) {
+            model.put("film", new Film());
+        } else {
+            model.put("film", filmRepository.findOne(filmId));
+        }
+        return "filmForm";
     }
 
-    public String getReviewByFilmId(int id) {
-        return filmRepository.findOne(id).getSummary();
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public String create(@Valid Film film) {
+        filmRepository.save(film);
+        return "redirect:/films";
     }
 
-    public Film getFilmById(int id) {
-        return filmRepository.findOne(id);
-    }
+
 }
+
+

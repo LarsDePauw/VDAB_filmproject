@@ -20,11 +20,11 @@
     <img src="${actor.profileImage}" class="img-responsive img-rounded" alt=${actor.name} width="304" height="236"/>
 
     <h2>Biography</h2>
-    <br>${actor.bio}
+    <h4>Info</h4>
+    Gender: ${actor.gender} - Birthday: ${actor.birthDay}
+    <br><br>${actor.bio}
 </div>
 
-<div class="container">
-    <h2>has played in</h2>
 </div>
 </body>
 </html>
