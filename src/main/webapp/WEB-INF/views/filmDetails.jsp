@@ -16,13 +16,34 @@
 </div>
 
 <div class="container">
-    <h2>Trailer</h2>
-
-    <div class="row">
-        <div class="col-sm-8">
-            <iframe width="600" height="338" src=${film.trailerUrl} frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div class="header">
+        <h2>Trailer</h2>
     </div>
+
+    <div class="responsive-video">
+        <iframe src="${film.trailerUrl}"></iframe>
+    </div>
+    .
+
+
+    <style>
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 60px;
+            overflow: hidden;
+        }
+
+        .responsive-video iframe,
+        .responsive-video object,
+        .responsive-video embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </div>
 
 <div class="container">
