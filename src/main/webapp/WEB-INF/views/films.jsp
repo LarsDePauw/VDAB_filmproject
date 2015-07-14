@@ -10,12 +10,9 @@
     <meta charset="UTF-8"/>
     <title>Films</title>
 </head>
-<body>
-<div class="container">
-    <h1>This is a list of all films</h1>
-</div>
 
 <div class="container">
+    <h1>This is a list of all films</h1>
     <table class="table table-striped table-bordered table-condensed">
         <tr>
             <th>Id</th>
@@ -29,15 +26,15 @@
 
                 <td><a href="films/delete/${film.id}" class="btn btn-danger btn-sm"><span
                         class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    <a href="films/form/{id}" class="btn info btn-sm"><span class=" glyphicon glyphicon-wrench"></span></a>
+                    <a href="films/form?id=${film.id}" class="btn info btn-sm"><span class=" glyphicon glyphicon-wrench"></span></a>
                 </td>
 
             </tr>
         </c:forEach>
     </table>
-    <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a film
-    </button>
+</div>
+<div class="container">
+    <a href="films/form/${film.id}"><button class="btn-succes btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a film </button></a>
 </div>
 
 </body>
