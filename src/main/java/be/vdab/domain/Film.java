@@ -23,6 +23,7 @@ public class Film {
     private int duration;
     private String director;
     private String summary;
+    @Enumerated(EnumType.ORDINAL)
     private Genre genre;
     private double rating;
     private byte[] image;

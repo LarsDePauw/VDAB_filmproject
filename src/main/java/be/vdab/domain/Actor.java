@@ -10,6 +10,7 @@ public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private String name;
 
     private String bio;
 
@@ -22,13 +23,22 @@ public class Actor {
     @Lob
     private byte[] profileImage;
 
-    public Actor(Date birthDay, Gender gender, byte[] profileImage) {
+    public Actor(String name, Date birthDay, Gender gender, byte[] profileImage) {
+        this.name = name;
         this.birthDay = birthDay;
         this.gender = gender;
         this.profileImage = profileImage;
     }
 
     public Actor() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getBio() {
