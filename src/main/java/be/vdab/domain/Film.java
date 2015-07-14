@@ -123,4 +123,5 @@ public class Film {
     public void setTrailerUrl(String trailerUrl) {
         this.trailerUrl = trailerUrl;
     }
+
 }

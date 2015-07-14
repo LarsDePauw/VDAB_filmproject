@@ -3,14 +3,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<html lang="en">
+<p lang="en">
 
-<head>
-    <meta charset="UTF-8"/>
-    <title>Details</title>
-</head>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Details</title>
+    </head>
 
-<body>
+
 <div class="container">
     <h1>${film.title}</h1>
 </div>
@@ -20,37 +20,25 @@
         <h2>Trailer</h2>
     </div>
 
-    <div class="responsive-video">
-        <iframe src="${film.trailerUrl}"></iframe>
-    </div>
-    .
+    <iframe width="560" height="315" src="${film.trailerUrl}" frameborder="0" allowfullscreen></iframe>
 
-
-    <style>
-        .responsive-video {
-            position: relative;
-            padding-bottom: 56.25%;
-            padding-top: 60px;
-            overflow: hidden;
-        }
-
-        .responsive-video iframe,
-        .responsive-video object,
-        .responsive-video embed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 </div>
 
 <div class="container">
     <h2>Summary</h2>
     ${film.summary}
-</div>
+</div
 
+<p>
+<br>
+<div class="container">
+    <h2>Info</h2>
+    Rating: ${film.rating}<br>
+    Genre: ${film.genre}<br>
+    Directed by ${film.director}<br>
+
+</div>
+</p>
 
 </body>
 </html>

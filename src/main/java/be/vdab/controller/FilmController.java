@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Map;
 
@@ -37,12 +38,27 @@ public class FilmController {
         model.put("film", film);
         return "filmDetails";
     }
-//    @RequestMapping(value = "films/delete/${film.id}", method = RequestMethod.GET)
-//    public String delete(@PathVariable("film.id") int id) {
-//        filmRepository.delete(id);
-//        return "redirect:/films";
-//    }
+    @RequestMapping (value = "films/create", method = RequestMethod.POST)
+    public String addMovie(@Valid Film film, Map<String, Object> model){
+        filmRepository.save(film);
+        model.put("film", film);
+        return "redirect:/filmForm";
+    }
+    @RequestMapping (value = "films/edit", method = RequestMethod.POST)
+    public String editFilm(Map<String, Object> model, @RequestParam(value = "id", required = false) Integer id) {
+        if (id == null) {
+            model.put("film", new Film());
+        } else {
+            model.put("film", filmRepository.findOne(id));
+        }
+        return "redirect:/films";
+    }
 
+    @RequestMapping(value = "films/delete/{filmId}", method = RequestMethod.GET)
+    public String delete(@PathVariable("filmId") int id) {
+        filmRepository.delete(id);
+        return "redirect:/films";
+    }
 
     public List<Film> getAllFilms() {
         return filmRepository.findAll();

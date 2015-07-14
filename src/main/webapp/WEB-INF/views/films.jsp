@@ -28,7 +28,7 @@
                 <td><a href="films/details?id=${film.id}">${film.title}</a></td>
 
                 <td><a href="films/delete/${film.id}" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                <td><button type="button" class="btn info btn-sm"><span class=" glyphicon glyphicon-wrench"></span></button></td>
+                <td><a href="films/create" class="btn info btn-sm"><span class=" glyphicon glyphicon-wrench"></span></a></td>
 
             </tr>
         </c:forEach>

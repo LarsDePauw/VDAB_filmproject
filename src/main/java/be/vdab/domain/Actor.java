@@ -77,4 +77,8 @@ public class Actor {
     public void setProfileImage(String profileImage) {
         this.profileImage = profileImage;
     }
+
+    public String toString() {
+        return "name";
+    }
 }
