@@ -26,15 +26,17 @@
 
                 <td><a href="films/delete/${film.id}" class="btn btn-danger btn-sm"><span
                         class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    <a href="films/form?id=${film.id}" class="btn info btn-sm"><span class=" glyphicon glyphicon-wrench"></span></a>
+                    <a href="films/form/${film.id}" class="btn info btn-sm"><span
+                            class=" glyphicon glyphicon-wrench"></span></a>
                 </td>
 
             </tr>
         </c:forEach>
     </table>
-</div>
-<div class="container">
-    <a href="films/form/${film.id}"><button class="btn-succes btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a film </button></a>
+    <a href="films/form/">
+        <button class="btn-succes btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a film
+        </button>
+    </a>
 </div>
 
 </body>

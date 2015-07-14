@@ -57,8 +57,8 @@ public class FilmController {
         return "redirect:/films";
     }
 
-    @RequestMapping("films/form")
-    public String form(Map<String, Object> model, @RequestParam(value = "id", required = false) Integer filmId) {
+    @RequestMapping("films/form/")
+    public String form(Map<String, Object> model, @RequestParam(value = "filmId", required = false) Integer filmId) {
         if (filmId == null) {
             model.put("film", new Film());
         } else {
