@@ -15,6 +15,20 @@
     <h1>${film.title}</h1>
 </div>
 
+<div class="container">
+    <h2>Trailer</h2>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <iframe width="600" height="338" src=${film.trailerUrl} frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Summary</h2>
+    ${film.summary}
+</div>
 
 
 </body>

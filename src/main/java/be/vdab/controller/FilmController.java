@@ -6,6 +6,7 @@ import be.vdab.domain.Film;
 import be.vdab.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,6 +37,12 @@ public class FilmController {
         model.put("film", film);
         return "filmDetails";
     }
+//    @RequestMapping(value = "films/delete/${film.id}", method = RequestMethod.GET)
+//    public String delete(@PathVariable("film.id") int id) {
+//        filmRepository.delete(id);
+//        return "redirect:/films";
+//    }
+
 
     public List<Film> getAllFilms() {
         return filmRepository.findAll();

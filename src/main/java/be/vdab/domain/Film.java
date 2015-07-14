@@ -22,6 +22,7 @@ public class Film {
 
     private int duration;
     private String director;
+    @Lob
     private String summary;
     @Enumerated(EnumType.ORDINAL)
     private Genre genre;

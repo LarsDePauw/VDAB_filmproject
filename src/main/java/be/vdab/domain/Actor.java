@@ -12,6 +12,7 @@ public class Actor {
     private Integer id;
     private String name;
 
+    @Lob
     private String bio;
 
     @Temporal(TemporalType.DATE)
@@ -21,9 +22,9 @@ public class Actor {
     private Gender gender;
 
     @Lob
-    private byte[] profileImage;
+    private String profileImage;
 
-    public Actor(String name, Date birthDay, Gender gender, byte[] profileImage) {
+    public Actor(String name, Date birthDay, Gender gender, String profileImage) {
         this.name = name;
         this.birthDay = birthDay;
         this.gender = gender;
@@ -69,11 +70,11 @@ public class Actor {
         this.gender = gender;
     }
 
-    public byte[] getProfileImage() {
+    public String getProfileImage() {
         return profileImage;
     }
 
-    public void setProfileImage(byte[] profileImage) {
+    public void setProfileImage(String profileImage) {
         this.profileImage = profileImage;
     }
 }

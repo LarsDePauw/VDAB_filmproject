@@ -6,16 +6,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8"/>
-  <title>Details</title>
+    <meta charset="UTF-8"/>
+    <title>Details</title>
 </head>
 
 <body>
 <div class="container">
-  <h1>${actor.name}</h1>
+    <h1>${actor.name}</h1>
 </div>
 
+<div class="container">
 
+    <img src="${actor.profileImage}" class="img-responsive img-rounded" alt=${actor.name} width="304" height="236"/>
 
+    <h2>Biography</h2>
+    <br>${actor.bio}
+</div>
+
+<div class="container">
+    <h2>has played in</h2>
+</div>
 </body>
 </html>
