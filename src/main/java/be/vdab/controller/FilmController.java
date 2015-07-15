@@ -66,8 +66,8 @@ public class FilmController {
         return "filmForm";
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String create(@Valid Film film) {
+    @RequestMapping(value = "/createFilm", method = RequestMethod.POST)
+    public String createFilm(@Valid Film film) {
         filmRepository.save(film);
         return "redirect:/films";
     }
@@ -83,5 +83,23 @@ public class FilmController {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

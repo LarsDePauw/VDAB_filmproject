@@ -6,19 +6,40 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8"/>
     <title>Films</title>
 </head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="home"><span class=" glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                <li class="active"><a href="films"> <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Films</a></li>
+                <li><a href="actors" class="active"><span class=" glyphicon glyphicon-user" aria-hidden="true"></span> Actors</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
 
 <div class="container">
-    <h1>This is a list of all films</h1>
+    <h1>Films</h1>
+
+            <style>
+                td, th{
+                    text-align: center;
+                }
+            </style>
+
     <table class="table table-striped table-bordered table-condensed">
         <tr>
             <th>Id</th>
             <th>Title</th>
-            <th></th>
+            <th>Poster</th>
+            <th>Options</th>
         </tr>
         <c:forEach items="${filmList}" var="film">
             <tr>
@@ -41,5 +62,6 @@
     </a>
 </div>
 
+</body>
 </body>
 </html>

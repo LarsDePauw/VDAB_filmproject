@@ -1,14 +1,15 @@
 package be.vdab.controller;
 
 import be.vdab.domain.Actor;
-import be.vdab.domain.Film;
+import be.vdab.domain.Gender;
 import be.vdab.repository.ActorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -39,4 +40,48 @@ public class ActorController {
         return "actorDetails";
     }
 
+    @RequestMapping(value = "/createActor", method = RequestMethod.POST)
+    public String create(@Valid Actor actor, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            return "actorForm";
+        } else {
+            actorRepository.save(actor);
+            return "redirect:/actors";
+        }
+    }
+
+    @RequestMapping(value = "actor/delete/{actorId}", method = RequestMethod.GET)
+    public String delete(@PathVariable("actorId") int id) {
+        actorRepository.delete(id);
+        return "redirect:/actors";
+    }
+
+    @RequestMapping("actors/form")
+    public String form(Map<String, Object> model, @RequestParam(value = "id", required = false) Integer id) {
+        if (id == null) {
+            model.put("actor", new Actor());
+        } else {
+            model.put("actor", actorRepository.findOne(id));
+        }
+        return "actorForm";
+    }
+    @ModelAttribute(value = "genders")
+    public List<Gender> genders() {
+        List<Gender> genres = new ArrayList<>();
+        for (Gender gender : Gender.values()) {
+            genres.add(gender);
+        }
+        return genres;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,8 @@
 package be.vdab.domain;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -16,6 +18,7 @@ public class Actor {
     private String bio;
 
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date birthDay;
 
     @Enumerated(EnumType.ORDINAL)
