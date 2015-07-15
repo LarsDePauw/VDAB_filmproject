@@ -20,11 +20,13 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
+            <th></th>
         </tr>
         <c:forEach items="${actorList}" var="actor">
             <tr>
                 <td>${actor.id}</td>
                 <td><a href="actors/details?id=${actor.id}">${actor.name}</a></td>
+                <td><img src="${actor.profileImage}" class="img-thumbnail" alt="${actor.name}" width=50 height=50> </td>
             </tr>
         </c:forEach>
     </table>

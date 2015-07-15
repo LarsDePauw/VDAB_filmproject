@@ -57,7 +57,7 @@
             <label for="title" class="col-sm-2 control-label">Trailer url</label>
 
             <div class="col-sm-10">
-                <sf:input path="trailerUrl" cssclass="form-control"/>
+                <sf:textarea  path="trailerUrl" cssclass="form-control"/>
             </div>
         </div>
         <div class="form-group">
