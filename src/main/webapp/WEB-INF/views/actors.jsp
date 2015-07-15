@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="imageStyle" href="imageStyle.css" type="text/css">
+
 <html lang="en">
 
 <head>
@@ -30,6 +32,11 @@
             </tr>
         </c:forEach>
     </table>
+
+    <a href="actors/form/">
+        <button class="btn-succes btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add an actor
+        </button>
+    </a>
 </div>
 
 </body>
