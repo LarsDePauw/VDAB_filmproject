@@ -53,7 +53,7 @@
                 <td><img src="${actor.profileImage}" class="img-thumbnail" alt="${actor.name}" width=50 height=50> </td>
                 <td><a href="actor/delete/${actor.id}" class="btn btn-danger btn-sm"><span
                         class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    <a href="actor/form?id=${actor.id}" class="btn info btn-sm"><span
+                    <a href="actors/form?id=${actor.id}" class="btn info btn-sm"><span
                             class=" glyphicon glyphicon-wrench"></span></a>
                 </td>
             </tr>

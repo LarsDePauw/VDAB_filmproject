@@ -55,12 +55,18 @@
         </div>
     </div>
     <div class=" form-group">
-        <label for="name" class="col-sm-2 control-label">bio</label>
+        <label for="name" class="col-sm-2 control-label">Bio</label>
 
         <div class="col-sm-10">
             <sf:textarea cols="145" rows="10" path="bio" cssclass="form-control"/>
         </div>
     </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Image url</label>
+
+            <div class="col-sm-10">
+                <sf:textarea  cols="145" rows="1" path="profileImage" cssclass="form-control"/>
+            </div>
     <div class="form-group">
         <div class="col-sm-12">
             <button type="submit" class="btn btn-info">SAVE</button>
