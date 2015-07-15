@@ -48,6 +48,12 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">Summary</label>
+            <div class="col-sm-10">
+                <sf:textarea  path="summary" cssclass="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Trailer url</label>
 
             <div class="col-sm-10">
@@ -55,15 +61,8 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-sm-10">
+            <div class="col-sm-12">
                 <button type="submit" class="btn btn-info">SAVE</button>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="title" class="col-sm-2 control-label">Summary</label>
-
-            <div class="col-sm-10">
-                <sf:input path="summary" cssclass="form-control"/>
             </div>
         </div>
     </sf:form>
