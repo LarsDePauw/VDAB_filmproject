@@ -50,14 +50,21 @@
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Summary</label>
             <div class="col-sm-10">
-                <sf:textarea  path="summary" cssclass="form-control"/>
+                <sf:textarea  cols="145" rows="5" path="summary" cssclass="form-control"/>
             </div>
         </div>
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Trailer url</label>
 
             <div class="col-sm-10">
-                <sf:textarea  path="trailerUrl" cssclass="form-control"/>
+                <sf:textarea  cols="145" rows="1" path="trailerUrl" cssclass="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">Poster</label>
+
+            <div class="col-sm-10">
+                <sf:textarea  cols="145" rows="1" path="image" cssclass="form-control"/>
             </div>
         </div>
         <div class="form-group">
@@ -66,6 +73,9 @@
             </div>
         </div>
     </sf:form>
+
+
+
 
 </div>
 

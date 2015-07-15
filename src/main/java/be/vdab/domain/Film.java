@@ -27,11 +27,11 @@ public class Film {
     @Enumerated(EnumType.ORDINAL)
     private Genre genre;
     private double rating;
-    private byte[] image;
+    private String image;
     private String trailerUrl;
 
 
-    public Film(String title, List<Character> cast, List<Comment> comments, int duration, String director, String summary, Genre genre, double rating, byte[] image, String trailerUrl) {
+    public Film(String title, List<Character> cast, List<Comment> comments, int duration, String director, String summary, Genre genre, double rating, String image, String trailerUrl) {
         this.title = title;
         this.cast = cast;
         this.comments = comments;
@@ -108,11 +108,11 @@ public class Film {
         this.rating = rating;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

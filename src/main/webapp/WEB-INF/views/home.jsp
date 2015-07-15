@@ -6,21 +6,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8"/>
-  <title>RIMDB</title>
+    <meta charset="UTF-8"/>
+    <title>RIMDB</title>
 </head>
 <body>
 <div class="container">
-  <h1>Welcome to the Ripoff Internet Movie Database! (RIMDB)</h1>
+    <h1>Welcome to the Ripoff Internet Movie Database! (RIMDB)</h1>
 </div>
 <div class="container column-header">
-<h2>Here you can find a collection of:</h2> <br>
-<a href="/films">Films</a>
-<br>
-<a href="/actors">Actors</a>
+    <h2>Here you can find a collection of:</h2> <br>
+
+    <h1><a href="/films">Films</a></h1>
+    <br>
+
+    <h1><a href="/actors">Actors</a></h1>
 </div>
 
-</div>
 
 </body>
 </html>

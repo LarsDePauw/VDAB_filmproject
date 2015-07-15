@@ -23,6 +23,7 @@
             <tr>
                 <td>${film.id}</td>
                 <td><a href="films/details?id=${film.id}">${film.title}</a></td>
+                <td><img src="${film.image}" class="img-thumbnail" alt="${film.title}" width=50 height=50> </td>
 
                 <td><a href="films/delete/${film.id}" class="btn btn-danger btn-sm"><span
                         class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
