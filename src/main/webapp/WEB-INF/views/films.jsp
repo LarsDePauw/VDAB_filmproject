@@ -26,7 +26,7 @@
 
                 <td><a href="films/delete/${film.id}" class="btn btn-danger btn-sm"><span
                         class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    <a href="films/form/${film.id}" class="btn info btn-sm"><span
+                    <a href="films/form?id=${film.id}" class="btn info btn-sm"><span
                             class=" glyphicon glyphicon-wrench"></span></a>
                 </td>
 

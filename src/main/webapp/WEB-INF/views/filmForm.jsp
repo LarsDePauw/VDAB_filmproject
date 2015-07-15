@@ -16,39 +16,102 @@
 <div class="container">
     <h1>Edit or add a movie</h1>
 </div>
-<div class="information">
 
-    <sf:form commandName="film" action="/filmForm" method="post">
+<div class="container">
+    <sf:form commandName="film" action="/create" method="post" cssClass="form-horizontal">
         <sf:hidden path="id"/>
         <div class="form-group">
-            <label for="title" class="col-md-1">Title</label>
-            <sf:input path="title" class="col-md-10"/>
+            <label for="title" class="col-sm-2 control-label">Title</label>
+            <div class="col-sm-10">
+                <sf:input path="title" class="form-control"/>
+            </div>
         </div>
-        <br>
-
         <div class="form-group">
-            <label for="title" class="col-md-6">Director</label>
-            <sf:input path="director" class="col-md-6"/>
-        </div>
-        <br>
+            <label for="title" class="col-sm-2 control-label">Director</label>
 
+            <div class="col-sm-10">
+                <sf:input path="director" class="form-control"/>
+            </div>
+        </div>
         <div class="form-group">
-            <label for="title" class="col-md-2">Genre</label>
-            <sf:input path="genre" class="form-control col-md-10"/>
-        </div>
-        <br>
+            <label for="title" class="col-sm-2 control-label">Genre</label>
 
+            <div class="col-sm-10">
+                <sf:select path="genre" items="${genres}" cssClass="form-control"/>
+            </div>
+        </div>
+        <div class=" form-group">
+            <label for="title" class="col-sm-2 control-label">Length</label>
+
+            <div class="col-sm-10">
+                <sf:input path="duration" class="form-control"/>
+            </div>
+        </div>
         <div class="form-group">
-            <label for="title" class="col-md-2">Length</label>
-            <sf:input path="duration" class="form-control col-md-10"/>
-        </div>
-        <br>
+            <label for="title" class="col-sm-2 control-label">Trailer url</label>
 
-        <button type="submit" class="btn btn-danger">SAVE</button>
+            <div class="col-sm-10">
+                <sf:input path="trailerUrl" cssclass="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-info">SAVE</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">Summary</label>
+
+            <div class="col-sm-10">
+                <sf:input path="summary" cssclass="form-control"/>
+            </div>
+        </div>
     </sf:form>
-
 
 </div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

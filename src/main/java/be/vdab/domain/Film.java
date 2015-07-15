@@ -124,4 +124,7 @@ public class Film {
         this.trailerUrl = trailerUrl;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

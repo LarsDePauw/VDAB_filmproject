@@ -57,12 +57,12 @@ public class FilmController {
         return "redirect:/films";
     }
 
-    @RequestMapping("films/form/")
-    public String form(Map<String, Object> model, @RequestParam(value = "filmId", required = false) Integer filmId) {
-        if (filmId == null) {
+    @RequestMapping("films/form")
+    public String form(Map<String, Object> model, @RequestParam(value = "id", required = false) Integer id) {
+        if (id == null) {
             model.put("film", new Film());
         } else {
-            model.put("film", filmRepository.findOne(filmId));
+            model.put("film", filmRepository.findOne(id));
         }
         return "filmForm";
     }
