@@ -55,10 +55,10 @@
 
     <table class="table table-bordered table-condensed table-hover">
         <tr>
-            <th bgcolor="#7fff00">Id</th>
-            <th bgcolor="#7fff00">Name</th>
-            <th bgcolor="#7fff00">Photo</th>
-            <th bgcolor="#7fff00">Edit</th>
+            <th bgcolor="#9acd32">Id</th>
+            <th bgcolor="#9acd32">Name</th>
+            <th bgcolor="#9acd32">Photo</th>
+            <th bgcolor="#9acd32">Edit</th>
         </tr>
         <c:forEach items="${actorList}" var="actor">
             <tr>

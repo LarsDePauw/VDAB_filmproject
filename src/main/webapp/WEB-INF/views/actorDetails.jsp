@@ -12,6 +12,15 @@
     <meta charset="UTF-8"/>
     <title>Details</title>
 </head>
+<style type="text/css">
+
+    body {
+        background-image: url("http://cdn.desktopwallpapers4.me/wallpapers/abstract/1920x1080/1/3455-white-backround-1920x1080-abstract-wallpaper.jpg");
+    }
+    h1, h2, h3{
+        color: darkcyan;
+    }
+</style>
 
 <body>
 
@@ -53,7 +62,7 @@
 
     <h2>Biography</h2>
     <h4>Info</h4>
-    Gender: ${actor.gender} - Birthday: ${actor.birthDay}
+    Gender: ${actor.gender}<br> Birthday: ${actor.birthDay}
     <br><br>${actor.bio}
 </div>
 

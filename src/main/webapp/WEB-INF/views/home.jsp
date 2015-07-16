@@ -14,7 +14,7 @@
     body {
         background-image: url("http://www.desktopwallpaperhd.net/wallpapers/8/b/background-images-wallpaper-colors-artistic-81867.jpg");
     }
-    h1, h2, h3{
+    h1, h2, h3, a{
         color: darkcyan;
     }
 </style>

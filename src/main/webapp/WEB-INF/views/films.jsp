@@ -36,10 +36,10 @@
 
     <table class="table table-bordered table-condensed table-hover">
         <tr>
-            <th bgcolor="#7fff00">Id</th>
-            <th bgcolor="#7fff00">Title</th>
-            <th bgcolor="#7fff00">Poster</th>
-            <th bgcolor="#7fff00">Options</th>
+            <th bgcolor="#9acd32">Id</th>
+            <th bgcolor="#9acd32">Title</th>
+            <th bgcolor="#9acd32">Poster</th>
+            <th bgcolor="#9acd32">Options</th>
         </tr>
         <c:forEach items="${filmList}" var="film">
             <tr>
