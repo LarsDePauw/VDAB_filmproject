@@ -3,14 +3,32 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8"/>
     <title>Editpage</title>
 </head>
+<style type="text/css">
+    td, th {
+        text-align: center;
+    }
+
+    h1, h2, h3 {
+        color: darkcyan;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    table {
+        background-color: aliceblue;
+    }
+</style>
 <body>
 
 <nav class="navbar navbar-default">
@@ -32,48 +50,48 @@
 
 <div class="container">
     <sf:form commandName="actor" action="/createActor" method="post" cssClass="form-horizontal">
-    <sf:hidden path="id"/>
-    <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Name</label>
+        <sf:hidden path="id"/>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
 
-        <div class="col-sm-10">
-            <sf:input path="name" class="form-control"/>
+            <div class="col-sm-10">
+                <sf:input path="name" class="form-control"/>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Birthday</label>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Birthday</label>
 
-        <div class="col-sm-10">
-            <sf:input path="birthDay" class="form-control" placeholder="yyyy-mm-dd"/>
+            <div class="col-sm-10">
+                <sf:input path="birthDay" class="form-control" placeholder="yyyy-mm-dd"/>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Gender</label>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Gender</label>
 
-        <div class="col-sm-10">
-            <sf:select path="gender" items="${genders}" cssClass="form-control"/>
+            <div class="col-sm-10">
+                <sf:select path="gender" items="${genders}" cssClass="form-control"/>
+            </div>
         </div>
-    </div>
-    <div class=" form-group">
-        <label for="name" class="col-sm-2 control-label">Bio</label>
+        <div class=" form-group">
+            <label for="name" class="col-sm-2 control-label">Bio</label>
 
-        <div class="col-sm-10">
-            <sf:textarea cols="145" rows="10" path="bio" cssclass="form-control"/>
+            <div class="col-sm-10">
+                <sf:textarea cols="145" rows="10" path="bio" cssclass="form-control"/>
+            </div>
         </div>
-    </div>
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Image url</label>
 
             <div class="col-sm-10">
-                <sf:textarea  cols="145" rows="1" path="profileImage" cssclass="form-control"/>
+                <sf:textarea cols="145" rows="1" path="profileImage" cssclass="form-control"/>
             </div>
-    <div class="form-group">
-        <div class="col-sm-12">
-            <button type="submit" class="btn btn-info">SAVE</button>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-info">SAVE</button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</sf:form>
+    </sf:form>
 
 
 </div>

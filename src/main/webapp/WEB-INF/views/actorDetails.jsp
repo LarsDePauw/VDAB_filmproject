@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <html lang="en">
 <script type="text/css">
@@ -13,11 +15,17 @@
     <title>Details</title>
 </head>
 <style type="text/css">
+    td, th {
+        text-align: center;
+    }
 
     body {
         background-image: url("http://cdn.desktopwallpapers4.me/wallpapers/abstract/1920x1080/1/3455-white-backround-1920x1080-abstract-wallpaper.jpg");
     }
-    h1, h2, h3{
+
+    h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+
         color: darkcyan;
     }
 </style>
@@ -25,16 +33,17 @@
 <body>
 
 <c:if test="${actor.id == 3}">
-<script type="text/javascript">
-    var counter = 0;
+    <script type="text/javascript">
+        var counter = 0;
 
-    function easterEgg() {
-        counter = counter + 1;
-        if (counter > 5 ) {
-            window.open("https://www.youtube.com/watch?v=pDxn0Xfqkgw");
+        function easterEgg() {
+            counter = counter + 1;
+            if (counter > 5) {
+                window.open("https://www.youtube.com/watch?v=pDxn0Xfqkgw");
+            }
         }
-    };
-</script>
+        ;
+    </script>
 </c:if>
 
 
@@ -64,8 +73,6 @@
     <h4>Info</h4>
     Gender: ${actor.gender}<br> Birthday: ${actor.birthDay}
     <br><br>${actor.bio}
-</div>
-
 </div>
 </body>
 </html>
