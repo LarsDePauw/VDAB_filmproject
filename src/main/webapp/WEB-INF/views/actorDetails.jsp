@@ -14,6 +14,16 @@
 </head>
 
 <body>
+<script type="text/javascript">
+    var counter = 0;
+    function easterEgg() {
+        counter = counter + 1;
+        if (counter > 5) {
+            window.open("https://www.youtube.com/watch?v=pDxn0Xfqkgw");
+        }
+    }
+    ;
+</script>
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -21,7 +31,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="/home"><span class=" glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                 <li><a href="/films"> <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Films</a></li>
-                <li class="active"><a href="/actors" class="active"><span class=" glyphicon glyphicon-user" aria-hidden="true"></span> Actors</a></li>
+                <li class="active"><a href="/actors" class="active"><span class=" glyphicon glyphicon-user"
+                                                                          aria-hidden="true"></span> Actors</a></li>
             </ul>
         </div>
     </div>
@@ -33,7 +44,8 @@
 
 <div class="container">
 
-    <img src="${actor.profileImage}" class="img-responsive img-rounded" alt=${actor.name} width="304" height="236"/>
+    <img src="${actor.profileImage}" class="img-responsive img-rounded" onClick=easterEgg()
+         alt=${actor.name} width="304" height="236"/>
 
     <h2>Biography</h2>
     <h4>Info</h4>
