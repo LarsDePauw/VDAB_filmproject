@@ -18,6 +18,7 @@ public class Film {
     private List<Character> cast = new ArrayList<>();
 
     @OneToMany
+    @JoinColumn(name = "film_id")
     private List<Comment> comments = new ArrayList<>();
 
     private int duration;

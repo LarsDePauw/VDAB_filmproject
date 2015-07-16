@@ -3,7 +3,7 @@ package be.vdab.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "film_character") // Character is a reserved keyword for mysql
+@Table(name = "film_character")
 public class Character {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
