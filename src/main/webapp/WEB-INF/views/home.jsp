@@ -9,6 +9,15 @@
     <meta charset="UTF-8"/>
     <title>RIMDB</title>
 </head>
+<style type="text/css">
+
+    body {
+        background-image: url("http://www.desktopwallpaperhd.net/wallpapers/8/b/background-images-wallpaper-colors-artistic-81867.jpg");
+    }
+    h1, h2, h3{
+        color: darkcyan;
+    }
+</style>
 <body>
 
 <nav class="navbar navbar-default">
@@ -28,12 +37,11 @@
     <h1>Welcome to the Ripoff Internet Movie Database! (RIMDB)</h1>
 </div>
 <div class="container column-header">
-    <h2>Here you can find a collection of:</h2> <br>
 
-    <h1><a href="/films">Films</a></h1>
     <br>
-
-    <h1><a href="/actors">Actors</a></h1>
+    <h3>Feel free to take a look at our <a href="/films">filmcollection</a></h3>,
+    <br>
+    <h3>or explore some of the actors in the <a href="/actors">actorcollection</a></h3>.
 </div>
 
 

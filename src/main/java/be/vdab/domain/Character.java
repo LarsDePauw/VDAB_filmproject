@@ -37,4 +37,12 @@ public class Character {
     public void setActor(Actor actor) {
         this.actor = actor;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

@@ -34,12 +34,12 @@
                 }
             </style>
 
-    <table class="table table-striped table-bordered table-condensed">
+    <table class="table table-bordered table-condensed table-hover">
         <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Poster</th>
-            <th>Options</th>
+            <th bgcolor="#7fff00">Id</th>
+            <th bgcolor="#7fff00">Title</th>
+            <th bgcolor="#7fff00">Poster</th>
+            <th bgcolor="#7fff00">Options</th>
         </tr>
         <c:forEach items="${filmList}" var="film">
             <tr>
@@ -51,7 +51,6 @@
                     <a href="films/form?id=${film.id}" class="btn info btn-sm"><span
                             class=" glyphicon glyphicon-wrench"></span></a>
                 </td>
-
             </tr>
         </c:forEach>
     </table>

@@ -14,16 +14,20 @@
 </head>
 
 <body>
+
+<c:if test="${actor.id == 3}">
 <script type="text/javascript">
     var counter = 0;
+
     function easterEgg() {
         counter = counter + 1;
-        if (counter > 5) {
+        if (counter > 5 ) {
             window.open("https://www.youtube.com/watch?v=pDxn0Xfqkgw");
         }
-    }
-    ;
+    };
 </script>
+</c:if>
+
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">

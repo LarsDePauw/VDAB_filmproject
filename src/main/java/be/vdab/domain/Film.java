@@ -128,4 +128,12 @@ public class Film {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }

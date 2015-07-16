@@ -52,7 +52,7 @@ public class ActorController {
 
     @RequestMapping(value = "actor/delete/{actorId}", method = RequestMethod.GET)
     public String delete(@PathVariable("actorId") int id) {
-        actorRepository.delete(id);
+        actorRepository.findOne(id).setId(0);
         return "redirect:/actors";
     }
 

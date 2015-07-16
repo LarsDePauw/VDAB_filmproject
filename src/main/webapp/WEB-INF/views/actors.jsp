@@ -7,10 +7,24 @@
 
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8"/>
     <title>Films</title>
 </head>
+<style type="text/css">
+
+    body {
+        background-image: url("https://ironlungs.files.wordpress.com/2011/07/hau2-stage.jpg");
+    }
+    h1, h2, h3{
+        color: darkcyan;
+    }
+    table{
+        background-color: aliceblue;
+    }
+</style>
+
 <body>
 
 <nav class="navbar navbar-default">
@@ -39,21 +53,19 @@
         }
     </style>
 
-    <table class="table table-striped table-bordered table-condensed">
+    <table class="table table-bordered table-condensed table-hover">
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Photo</th>
-            <th>Options</th>
+            <th bgcolor="#7fff00">Id</th>
+            <th bgcolor="#7fff00">Name</th>
+            <th bgcolor="#7fff00">Photo</th>
+            <th bgcolor="#7fff00">Edit</th>
         </tr>
         <c:forEach items="${actorList}" var="actor">
             <tr>
                 <td>${actor.id}</td>
                 <td><a href="actors/details?id=${actor.id}">${actor.name}</a></td>
                 <td><img src="${actor.profileImage}" class="img-thumbnail" alt="${actor.name}" width=50 height=50> </td>
-                <td><a href="actor/delete/${actor.id}" class="btn btn-danger btn-sm"><span
-                        class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                    <a href="actors/form?id=${actor.id}" class="btn info btn-sm"><span
+                <td><a href="actors/form?id=${actor.id}" class="btn info btn-sm"><span
                             class=" glyphicon glyphicon-wrench"></span></a>
                 </td>
             </tr>
@@ -61,7 +73,7 @@
     </table>
 
     <a href="actors/form/">
-        <button class="btn-succes btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add an actor
+        <button class="btn-succes btn-lg" style="display: block"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add an actor
         </button>
 
     </a>
